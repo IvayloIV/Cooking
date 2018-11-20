@@ -1,0 +1,23 @@
+nav {
+    ul {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        padding: 0;
+    }
+    
+    a {
+        padding: 0.3rem 1rem;
+        border-right: 2px solid #DBDBDB;
+        font-size: 1.2rem;
+        text-decoration: none;
+        color: #000;
+        transition: color 0.3s ease;
+    }
+    
+    li {
+        &:hover a{
+            color: #FFC11C;
+        }
+    }
+}

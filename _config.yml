@@ -1,0 +1,27 @@
+# Site settings
+
+title: Cooking
+description: Cooking easy & fun
+email: ivvo98@gmail.com
+
+baseurl: "/Cooking"
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+
+twitter_username: IvayloIV
+github_username: IvayloIV
+
+future: true
+markdown: kramdown
+
+plugins:
+  - jekyll-feed
+destination: docs
+ 
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - package.json
+  - gulpfile.js
+  - docs
+  - node_modules
+  - scss

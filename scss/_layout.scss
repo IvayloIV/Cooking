@@ -1,0 +1,181 @@
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+.site-logo{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/Cooking-for-one-1000x550.jpg") no-repeat center;
+    background-size: cover;
+    text-align: center;
+    
+    div {
+        margin: 0 auto;
+        padding: 9.6rem 0 15.6rem 0;
+        color: white;
+    }
+    
+    h2 {
+        letter-spacing: 5px;
+        font-size: 4.2rem;
+        margin: 0 0 0.6rem;
+    }
+    
+    p {
+        font-size: 1.8rem;
+        font-style: italic;
+        letter-spacing: 3px;
+        margin: 0;
+    }
+    
+    hr {
+        width: 26%;
+        height: 2px;
+        border: none;
+        background: white;
+    }
+}
+
+.about-us {
+    text-align: center;
+    padding: 3.5rem 0;
+    
+    h2 {
+        margin: 0;
+        text-transform: uppercase;
+        font-size: 1.5rem;
+    }
+    
+    hr {
+        width: 14%;
+        background: #959295;
+        height: 2px;
+        border: none;
+    }
+    
+    div {
+        p {
+            color: #C8C6C4;
+            margin-top: 0.3%;
+            font-style: italic;
+            font-size: 1.2rem;
+        }
+    }
+    
+    p {
+        color: #9a9399;
+        width: 61%;
+        margin: 2.2rem auto 0;
+        font-size: 1.05rem;
+    }
+}
+
+.best-receipts {
+    background: #F7F7F7;
+    padding-top: 2.5rem;
+    
+}
+
+.best-receipts > div:first-of-type {
+    text-align: center;
+    
+    h2 {
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 0.7rem;
+    }
+    
+    hr {
+        width: 32%;
+        background: #959295;
+        height: 2px;
+        border: 0;
+    }
+}
+
+.best-receipts > div:last-of-type {
+    display: flex;
+    padding-top: 2.7rem;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+    article {
+        width: 26%;
+        background: #FFFFFF;
+        border-radius: 10px;
+        margin-right: 1rem;
+        margin-left: 1rem;
+        margin-bottom: 3rem;
+    }
+    
+    div:first-of-type {
+        position: relative;
+        
+        &:before {
+            display: block;
+            content: '';
+            padding-top: 60%;
+        }
+    }
+    
+    img {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+    }
+    
+    div:last-of-type {
+        padding: 1rem 2rem;
+        box-sizing: border-box;
+        
+        h4 {
+            font-size: 1.5rem;
+            margin: 1rem 0 0.5rem 0;
+        }
+        
+        i {
+            color: #FFC11C;
+        }
+        
+        p:first-of-type {
+            margin: 0;
+            color: #7F7F7F;
+            
+            span {
+                font-weight: 500;
+                margin-left: 0.4rem;
+            }
+        }
+        
+        P:last-of-type {
+            color: rgb(38, 38, 38);
+        }
+    }
+    
+    button {
+        background: transparent;
+        border: 2px solid #FFC11C;
+        padding: 0.6rem 1.7rem;
+        border-radius: 3px;
+        cursor: pointer;
+        outline: none;
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: #766f75;
+        margin-top: 0.3rem;
+        margin-bottom: 0.7rem;
+        transition: all 0.3s ease;
+        
+        &:hover {
+            background: #FFC11C;
+            color: white;
+        }
+    }
+}
