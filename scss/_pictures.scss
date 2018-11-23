@@ -1,4 +1,4 @@
-.salads > div:first-of-type, .pizza > div:first-of-type, .desserts > div:first-of-type {
+.salads-pictures > div:first-of-type, .pizza > div:first-of-type, .desserts > div:first-of-type {
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/logo1.jpg") no-repeat center;
     background-size: cover;
     padding: 7rem 0;
@@ -26,7 +26,7 @@
 .pizza > div:first-of-type hr { width: 16%; }
 .desserts > div:first-of-type hr { width: 21%; }
 
-.salads > div:last-of-type, .desserts > div:last-of-type {
+.salads-pictures > div:last-of-type, .desserts > div:last-of-type {
     width: 96%;
     margin: 0 auto;
     display: grid;
