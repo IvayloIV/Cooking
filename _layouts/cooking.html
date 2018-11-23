@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{site.title}}</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <link rel="stylesheet" href="{{site.baseurl}}/css/style.css">
 </head>
 <body>
@@ -16,7 +17,13 @@
         <nav>
             <ul>
                 <li><a href="{{site.baseurl}}/">Home</a></li>
-                <li><a href="#">Receipts</a></li>
+                <li><a href="#">Receipts</a>
+                    <ul>
+                        <li><a href="{{site.baseurl}}/salads/">Salads</a></li>
+                        <li><a href="#">Pizza</a></li>
+                        <li><a href="#">Desserts</a></li>
+                    </ul>
+                </li>
                 <li><a href="#">Tricks</a></li>
                 <li><a href="{{site.baseurl}}/pictures/">Pictures</a></li>
                 <li><a href="#">Login</a></li>
@@ -61,5 +68,6 @@
             <p>Copyright &copy; 2018 <span>Cook</span>ing &middot; All Rights Reserved.</p>
         </section>
     </footer>
+    <script src="{{site.baseurl}}/js/navigation.js"></script>
 </body>
 </html>
