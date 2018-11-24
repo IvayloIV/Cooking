@@ -6,6 +6,10 @@
     background: url("../images/Pizza/background2.jpg") no-repeat center fixed;
 }
 
+.desserts {
+    background: url("../images/Dessert/background.jpg") no-repeat center fixed;
+}
+
 .receipt {
     background-size: cover;
     margin: 0 auto;
@@ -132,6 +136,10 @@
         background: #f6f1e6 url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23090909' fill-opacity='0.07' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
         margin-bottom: 7rem;
         border: 1px solid black;
+        
+        &:nth-of-type(even) .receipt-main div:first-of-type{
+            order: 1;
+        }
     
         h2 {
             position: absolute;
