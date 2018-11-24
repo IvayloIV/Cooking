@@ -1,0 +1,101 @@
+.tricks > div:first-of-type {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/Tricks/tricks-logo.jpg") no-repeat center fixed;
+    background-size: cover;
+    text-align: center;
+    color: white;
+    padding: 10rem 0;
+    
+    h2 {
+        letter-spacing: 1px;
+        font-size: 3rem;
+        margin: 0 0 0.6rem;
+    }
+    
+    p {
+        font-size: 1.3rem;
+        width: 58%;
+        margin: 0 auto;
+    }
+    
+    hr {
+        width: 20%;
+        height: 2px;
+        border: none;
+        background: white;
+    }
+}
+
+.tricks > div:last-of-type{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 28rem);
+    
+    img {
+        width: 100%;
+        height: 100%;
+    }
+    
+    article {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        box-sizing: border-box;
+        overflow: hidden;
+        position: relative;
+        
+        &:after {
+            display: block;
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            border: 1rem transparent;
+            transition: border 0.4s ease;
+        }
+    
+        &:hover:after {
+            border: 1rem solid rgba(0, 0, 0, 0.2);
+        }
+        
+        div:first-of-type {
+            height: 28rem;
+        }
+    
+        $count: 3;
+        @for $i from 1 through 4 {
+            @for $j from 1 through 2 {
+                &:nth-of-type(#{$count}) div:first-of-type{
+                    order: 1;
+                }
+                $count: $count + 1;
+            }
+            $count: $count + 2;
+        }
+    }
+    
+    div:last-of-type {
+        padding: 0 3rem;
+        align-self: center;
+        
+        h4 {
+            color: #1A1C1E;
+            font-size: 2rem;
+            text-align: center;
+            margin: 1.5rem 0;
+        }
+        
+        p {
+            color: #6a6c6e;
+            line-height: 1.75;
+            font-size: 1.2rem;
+            align-self: center;
+        }
+        
+        span {
+            font-family: 'Kaushan Script', cursive;
+            font-size: 1.3rem;
+            color: #F0B80E;
+            display: block;
+            text-align: right;
+            font-style: italic;
+        }
+    }
+}
