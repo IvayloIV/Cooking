@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cooking</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="/Cooking/css/style.css">
+</head>
+<body>
+    <header>
+        <div>
+            <a href="/Cooking/"><img src="/Cooking/images/Chef-Logo.png" alt="chef-logo"></a>
+            <h1><a href="/Cooking/"><span>Cook</span>ing</a></h1>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="/Cooking/">Home</a></li>
+                <li><a href="#">Receipts</a>
+                    <ul>
+                        <li><a href="/Cooking/salads/">Salads</a></li>
+                        <li><a href="/Cooking/pizza/">Pizza</a></li>
+                        <li><a href="/Cooking/desserts/">Desserts</a></li>
+                    </ul>
+                </li>
+                <li><a href="/Cooking/tricks/">Tricks</a></li>
+                <li><a href="/Cooking/pictures/">Pictures</a></li>
+                <li><a href="#">Login</a></li>
+                <li><a href="/Cooking/register/">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="register">
+    <div>
+        <div class="register-header">
+            <div><img src="/Cooking/images/register-logo.png" alt="logo"></div>
+            <h2>Register</h2>
+        </div>
+        <form action="#">
+            <div>
+                <label>
+                    <span>First name</span>
+                    <input type="text" name="first-name">
+                </label>
+                <label>
+                    <span>Last name</span>
+                    <input type="text" name="last-name">
+                </label>
+            </div>
+            <label>
+                <span>Email</span>
+                <input type="email" name="email">
+            </label>
+            <label>
+                <span>Phone</span>
+                <input type="number" name="phone">
+            </label>
+            <label>
+                <span>Password</span>
+                <input type="password" name="password">
+            </label>
+            <label>
+                <span>Repeat password</span>
+                <input type="password" name="rep-password">
+            </label>
+            <div class="gender">
+                <span>Gender</span>
+                <div>
+                    <label class="container">
+                        <input type="radio" name="gender">
+                        <span class="checkmark"></span>
+                        <span>Man</span>
+                    </label>
+                    <label class="container">
+                        <input type="radio" name="gender">
+                        <span class="checkmark"></span>
+                        <span>Woman</span>
+                    </label>
+                </div>
+            </div>
+            <input type="submit" value="Register">
+        </form>
+        <p><a href="#">Already have registration? <i class="fas fa-arrow-right"></i></a></p>
+        <div class="register-footer">
+            <div><i class="fab fa-facebook-f"></i> Log in with Facebook</div>
+            <div><i class="fab fa-google-plus-g"></i> Log in with Google+</div>
+        </div>
+    </div>
+</section>
+    </main>
+
+    <footer>
+        <section class="info">
+            <article class="contact-us">
+                <h3>Contact us</h3>
+                <ul>
+                    <li><span>Address:</span> Sofia, Bulgaria <i class="fas fa-map-marker-alt"></i></li>
+                    <li><span>E-mail:</span> cooking@gmail.com <i class="fas fa-envelope"></i></li>
+                    <li><span>Phone:</span> +395 213 723 <i class="fas fa-phone"></i></li>
+                    <li><span>Work time:</span> 09:00 - 17:30 <i class="far fa-clock"></i></li>
+                </ul>
+            </article>
+            <article class="subscribe">
+                <h3>Subscribe to The Daily Receipts</h3>
+                <form action="#">
+                    <input type="email" name="email" placeholder="Enter Email Address">
+                    <input type="submit" value="Submit">
+                </form>
+            </article>
+            <article class="follow-us">
+                <h3>Follow us</h3>
+                <div>
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-youtube"></i>
+                    <i class="fab fa-linkedin-in"></i>
+                </div>
+            </article>
+        </section>
+        <section class="rights">
+            <p>Copyright &copy; 2018 <span>Cook</span>ing &middot; All Rights Reserved.</p>
+        </section>
+    </footer>
+    <script src="/Cooking/js/navigation.js"></script>
+</body>
+</html>

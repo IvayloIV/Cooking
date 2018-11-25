@@ -1,0 +1,63 @@
+---
+layout: cooking
+title: Register
+permalink: /register/
+---
+
+<section class="register">
+    <div>
+        <div class="register-header">
+            <div><img src="{{site.baseurl}}/images/register-logo.png" alt="logo"></div>
+            <h2>Register</h2>
+        </div>
+        <form action="#">
+            <div>
+                <label>
+                    <span>First name</span>
+                    <input type="text" name="first-name">
+                </label>
+                <label>
+                    <span>Last name</span>
+                    <input type="text" name="last-name">
+                </label>
+            </div>
+            <label>
+                <span>Email</span>
+                <input type="email" name="email">
+            </label>
+            <label>
+                <span>Phone</span>
+                <input type="number" name="phone">
+            </label>
+            <label>
+                <span>Password</span>
+                <input type="password" name="password">
+            </label>
+            <label>
+                <span>Repeat password</span>
+                <input type="password" name="rep-password">
+            </label>
+            <div class="gender">
+                <span>Gender</span>
+                <div>
+                    <label class="container">
+                        <input type="radio" name="gender">
+                        <span class="checkmark"></span>
+                        <span>Man</span>
+                    </label>
+                    <label class="container">
+                        <input type="radio" name="gender">
+                        <span class="checkmark"></span>
+                        <span>Woman</span>
+                    </label>
+                </div>
+            </div>
+            <input type="submit" value="Register">
+        </form>
+        <p><a href="#">Already have registration? <i class="fas fa-arrow-right"></i></a></p>
+        <div class="register-footer">
+            <div><i class="fab fa-facebook-f"></i> Log in with Facebook</div>
+            <div><i class="fab fa-google-plus-g"></i> Log in with Google+</div>
+        </div>
+    </div>
+</section>
