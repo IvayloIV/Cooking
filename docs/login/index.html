@@ -33,60 +33,33 @@
     </header>
 
     <main>
-        <section class="register">
-    <div>
-        <div class="register-header">
-            <div><img src="/Cooking/images/register-logo.png" alt="logo"></div>
-            <h2>Register</h2>
+        <section class="login">
+    <div class="login-form">
+        <div class="login-header">
+            <h2>Login</h2>
+            <p><span>Cooking</span> with account better!</p>
+            <i class="fas fa-utensils"></i>
         </div>
-        <form action="#">
-            <div>
+        <div class="login-content">
+            <form action="#">
                 <label>
-                    <span>First name</span>
-                    <input type="text" name="first-name">
+                    <input type="text" name="name" placeholder="Name">
+                    <i class="fas fa-user"></i>
                 </label>
                 <label>
-                    <span>Last name</span>
-                    <input type="text" name="last-name">
+                    <input type="password" name="password" placeholder="Password">
+                    <i class="fas fa-lock"></i>
                 </label>
+                <label>
+                    <input type="checkbox">
+                    <span>Remember me</span>
+                </label>
+                <input type="submit" value="Login">
+            </form>
+            <div class="media">
+                <div><i class="fab fa-facebook-f"></i> Facebook</div>
+                <div><i class="fab fa-google-plus-g"></i> Google+</div>
             </div>
-            <label>
-                <span>Email</span>
-                <input type="email" name="email">
-            </label>
-            <label>
-                <span>Phone</span>
-                <input type="number" name="phone">
-            </label>
-            <label>
-                <span>Password</span>
-                <input type="password" name="password">
-            </label>
-            <label>
-                <span>Repeat password</span>
-                <input type="password" name="rep-password">
-            </label>
-            <div class="gender">
-                <span>Gender</span>
-                <div>
-                    <label class="container">
-                        <input type="radio" name="gender">
-                        <span class="checkmark"></span>
-                        <span>Man</span>
-                    </label>
-                    <label class="container">
-                        <input type="radio" name="gender">
-                        <span class="checkmark"></span>
-                        <span>Woman</span>
-                    </label>
-                </div>
-            </div>
-            <input type="submit" value="Register">
-        </form>
-        <p><a href="/Cooking/login/">Already have registration? <i class="fas fa-arrow-right"></i></a></p>
-        <div class="register-footer">
-            <div><i class="fab fa-facebook-f"></i> Log in with Facebook</div>
-            <div><i class="fab fa-google-plus-g"></i> Log in with Google+</div>
         </div>
     </div>
 </section>
