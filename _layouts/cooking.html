@@ -8,11 +8,18 @@
     <link rel="stylesheet" href="{{site.baseurl}}/css/style.css">
 </head>
 <body>
+    <input type="checkbox" id="nav">
     <header>
         <div>
             <a href="{{site.baseurl}}/"><img src="{{site.baseurl}}/images/Chef-Logo.png" alt="chef-logo"></a>
             <h1><a href="{{site.baseurl}}/"><span>Cook</span>ing</a></h1>
         </div>
+
+        <label for="nav">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-times"></i>
+            <span>Menu</span>
+        </label>
 
         <nav>
             <ul>
@@ -25,7 +32,7 @@
                     </ul>
                 </li>
                 <li><a href="{{site.baseurl}}/tricks/">Tricks</a></li>
-                <li><a href="{{site.baseurl}}/pictures/">Pictures</a></li>
+                <li><a href="{{site.baseurl}}/gallery/">Gallery</a></li>
                 <li><a href="{{site.baseurl}}/login/">Login</a></li>
                 <li><a href="{{site.baseurl}}/register/">Register</a></li>
             </ul>

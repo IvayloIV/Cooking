@@ -16,9 +16,21 @@
     padding: 7rem 4rem 4rem 4rem;
     box-sizing: border-box;
     
+    @include mq(650) {
+        padding: 7rem 2rem 3rem 2rem;
+    }
+    
+    @include mq(650) {
+        padding: 7rem 1rem 2rem 1rem;
+    }
+    
     @at-root #{&}-header {
         display: flex;
         align-items: center;
+    
+        @include mq(900) {
+            flex-direction: column;
+        }
         
         ul {
             display: flex;
@@ -28,19 +40,39 @@
             border-bottom: 2px solid #646464;
             border-top: 2px solid #646464;
             padding: 0;
+    
+            @include mq(900) {
+                width: 100%;
+            }
+            
+            @include mq(450) {
+                flex-direction: column;
+                border: none;
+            }
+    
+            li:not(:last-of-type) {
+                border-right: 2px solid #646464;
+                
+                @include mq(450) {
+                    border-right: none;
+                }
+            }
             
             li {
                 padding: 1rem 0.5rem 1rem 0.5rem;
                 flex: auto;
                 text-align: center;
-            }
-            
-            li:not(:last-of-type) {
-                border-right: 2px solid #646464;
+    
+                @include mq(450) {
+                    border-bottom: 2px solid #646464;
+        
+                    &:first-of-type {
+                        border-top: 2px solid #646464;
+                    }
+                }
             }
             
             h4 {
-                font-size: 1.4rem;
                 margin: 0 0 1rem 0;
             }
             
@@ -49,7 +81,7 @@
             }
             
             span {
-                font-size: 1.1rem;
+                font-size: 1.1em;
                 font-style: italic;
             }
         }
@@ -62,11 +94,24 @@
         width: 80%;
         margin: 0 auto;
         
+        @include mq(900) {
+            flex-direction: column;
+            padding-bottom: 0.5rem;
+        }
+        
+        @include mq(450) {
+            width: 90%;
+        }
+        
         & > div:first-of-type {
             width: 56%;
             margin-top: 1rem;
             overflow: hidden;
             border-radius: 10px;
+            
+            @include mq(900) {
+                width: 100%;
+            }
             
             &:hover img{
                 opacity: 0.7;
@@ -77,18 +122,24 @@
             flex: 0 1 auto;
             box-sizing: border-box;
             
+            @include mq(900) {
+                text-align: center;
+            }
+            
             ol {
                 list-style: none;
                 padding: 0 0 0 1rem;
+                
+                @include mq(900) {
+                    padding: 0;
+                }
             }
             
             h4 {
-                font-size: 1.5rem;
                 margin: 1.2rem 0 0.5rem 0;
             }
             
             li {
-                font-size: 1.12rem;
                 padding: 0.5rem 0 0.2rem 0;
             }
             
@@ -109,7 +160,6 @@
                 a {
                     text-decoration: none;
                     color: white;
-                    font-size: 1rem;
                     font-weight: 700;
                     padding: .7rem 1.2rem;
                     display: block;
@@ -137,8 +187,16 @@
         margin-bottom: 7rem;
         border: 1px solid black;
         
+        @include mq(900) {
+            padding: 2rem 1rem;
+        }
+        
         &:nth-of-type(even) .receipt-main div:first-of-type{
             order: 1;
+            
+            @include mq(900) {
+                order: 0;
+            }
         }
     
         h2 {
@@ -152,31 +210,45 @@
             margin: 0;
             border: 1px solid black;
             border-bottom: 2px dotted black;
+            
+            @include mq(700) {
+                top: -3.5rem;
+            }
         }
         
         img {
             width: 100%;
             height: 315px;
             border-radius: 10px;
+            
+            @include mq(700) {
+                height: 280px;
+            }
+    
+            @include mq(450) {
+                height: 200px;
+            }
         }
         
         .votes {
             padding: 1rem;
             
+            @include mq(900) {
+                text-align: center;
+                padding: 1rem 0 0 0;
+            }
+            
             .fa-star {
                 color: #FFC11C;
-                font-size: 1.1rem;
             }
             
             span {
-                font-size: 1.04rem;
                 margin-left: 0.3rem;
                 font-weight: 500;
                 color: #7f7f7f;
             }
             
             p {
-                font-size: 1.1rem;
                 color: #666161;
             }
         }
@@ -195,12 +267,10 @@
         }
         
         h4 {
-            font-size: 1.5rem;
             margin: 0.3rem 0 0;
         }
         
         li {
-            font-size: 1.12rem;
             padding: .5rem 0 .2rem;
         }
     }

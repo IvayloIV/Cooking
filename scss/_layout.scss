@@ -1,10 +1,3 @@
-body {
-    font-family: 'Lato', sans-serif;
-    margin: 0;
-    padding: 0;
-    font-size: 16px;
-}
-
 .site-logo{
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/Cooking-for-one-1000x550.jpg") no-repeat center;
     background-size: cover;
@@ -14,16 +7,20 @@ body {
         margin: 0 auto;
         padding: 9.6rem 0 15.6rem 0;
         color: white;
+        
+        @include mq(710) {
+            padding: 8.6rem 0 14.6rem 0;
+        }
     }
     
     h2 {
         letter-spacing: 5px;
-        font-size: 4.2rem;
+        font-size: 3.7em;
         margin: 0 0 0.6rem;
     }
     
     p {
-        font-size: 1.8rem;
+        font-size: 1.6em;
         font-style: italic;
         letter-spacing: 3px;
         margin: 0;
@@ -44,7 +41,6 @@ body {
     h2 {
         margin: 0;
         text-transform: uppercase;
-        font-size: 1.6rem;
     }
     
     hr {
@@ -59,7 +55,7 @@ body {
             color: #C8C6C4;
             margin-top: 0.3%;
             font-style: italic;
-            font-size: 1.2rem;
+            font-size: 1.1em;
         }
     }
     
@@ -67,7 +63,11 @@ body {
         color: #9a9399;
         width: 61%;
         margin: 2.2rem auto 0;
-        font-size: 1.05rem;
+        
+        @include mq(800) {
+            width: 90%;
+            margin-top: 1rem;
+        }
     }
 }
 
@@ -84,7 +84,6 @@ body {
         text-transform: uppercase;
         letter-spacing: 1px;
         margin-bottom: 0.7rem;
-        font-size: 1.6rem;
     }
     
     hr {
@@ -109,6 +108,14 @@ body {
         margin-right: 1rem;
         margin-left: 1rem;
         margin-bottom: 3rem;
+        
+       @include mq(850) {
+           width: 40%;
+       }
+    
+        @include mq(500) {
+            width: 90%;
+        }
     }
     
     div:first-of-type {
@@ -137,7 +144,6 @@ body {
         box-sizing: border-box;
         
         h4 {
-            font-size: 1.5rem;
             margin: 1rem 0 0.5rem 0;
         }
         
@@ -184,11 +190,14 @@ body {
 .new-dishes {
     padding: 2rem 0 4.5rem 0;
     
+    @include mq(700) {
+        padding: 2rem 0 2rem 0;
+    }
+    
     h2 {
         text-transform: uppercase;
         letter-spacing: 1px;
         margin-bottom: 0.5rem;
-        font-size: 1.6rem;
     }
     
     hr {
@@ -206,6 +215,11 @@ body {
         display: flex;
         justify-content: space-evenly;
         margin-top: 3rem;
+    
+        @include mq(700) {
+            flex-direction: column;
+            margin: 0;
+        }
         
         img {
             width: 100%;
@@ -219,6 +233,15 @@ body {
             overflow: hidden;
             cursor: pointer;
             border-radius: 12px;
+    
+            @include mq(700) {
+                width: 70%;
+                margin: 1rem auto;
+            }
+    
+            @include mq(500) {
+                width: 90%;
+            }
             
             &:before {
                 display: block;
@@ -241,6 +264,11 @@ body {
                 transform: translateX(-100%);
                 border-radius: 12px;
                 transition: all 0.8s ease;
+    
+                @include mq(500) {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
             }
     
             &:hover:after {
@@ -250,7 +278,8 @@ body {
     
             &:nth-of-type(1):after { content: 'Stewed steak'; }
             &:nth-of-type(2):after { content: 'Pizza Fresca'; }
-            &:nth-of-type(3):after { content: 'Scalloped-Potatoes'; }
+            &:nth-of-type(3):after { content: 'Scalloped'; }
+            
         }
     }
 }
@@ -259,12 +288,15 @@ body {
     padding: 2rem 0 5rem 0;
     background: #f7f7f7 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='12' viewBox='0 0 20 12'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='charlie-brown' fill='%23000000' fill-opacity='0.05'%3E%3Cpath d='M9.8 12L0 2.2V.8l10 10 10-10v1.4L10.2 12h-.4zm-4 0L0 6.2V4.8L7.2 12H5.8zm8.4 0L20 6.2V4.8L12.8 12h1.4zM9.8 0l.2.2.2-.2h-.4zm-4 0L10 4.2 14.2 0h-1.4L10 2.8 7.2 0H5.8z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
     
+    @include mq(820) {
+        padding-bottom: 3rem;
+    }
+    
     h2 {
         text-transform: uppercase;
         letter-spacing: 1px;
         margin-bottom: 0.5rem;
         text-align: center;
-        font-size: 1.6rem;
     }
     
     hr {
@@ -279,6 +311,10 @@ body {
         justify-content: center;
         margin-top: 3rem;
         
+        @include mq(820) {
+            flex-direction: column;
+        }
+        
         article {
             width: 25%;
             margin: 0 1rem;
@@ -289,8 +325,16 @@ body {
             box-shadow: 8px 6px 36px 0 rgba(0,0,0,.15);
             background: #f8f8f8;
             
+            @include mq(820) {
+                width: 65%;
+                margin: 1rem auto;
+            }
+            
+            @include  mq(550){
+                width: 90%;
+            }
+            
             h4 {
-                font-size: 1.4rem;
                 margin: 2rem 0 0;
                 font-weight: 900;
             }
@@ -298,7 +342,6 @@ body {
             p {
                 color: #7A7A7A;
                 font-style: italic;
-                font-size: 1.05rem;
                 margin-bottom: 0;
             }
     
@@ -317,6 +360,12 @@ body {
             position: relative;
             width: 44%;
             margin: 0 auto;
+            
+            @include mq(820) { width: 35%; }
+    
+            @include  mq(550){
+                width: 30%;
+            }
     
             &:before {
                 display: block;

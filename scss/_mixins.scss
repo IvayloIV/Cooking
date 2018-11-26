@@ -1,0 +1,17 @@
+@mixin mq($width) {
+    @media all and (max-width: #{$width}px){
+        & {
+            @content;
+        }
+    }
+}
+
+@mixin aspect-ratio($width, $height) {
+    $ration: unquote(($height / $width * 100) + "%");
+    
+    &:before {
+        display: block;
+        content: '';
+        padding-top: #{$ration};
+    }
+}

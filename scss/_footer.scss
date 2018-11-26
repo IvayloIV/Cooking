@@ -5,6 +5,25 @@
     padding: 3rem 0 5rem 0;
     background: #e2e2e2 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23000000' fill-opacity='0.3' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
     
+    @include mq(855) {
+        padding-bottom: 2rem;
+    }
+    
+    @include mq(660) {
+        flex-direction: column;
+    }
+    
+    article {
+        @include mq(660) {
+            width: 65%;
+            margin: 1rem auto;
+        }
+    
+        @include mq(450) {
+            width: 90%;
+        }
+    }
+    
     h3 {
         color: #37393b;
         font-size: 1.6rem;
@@ -117,7 +136,6 @@
         margin: 0;
         padding: 1.1rem 0;
         font-weight: 600;
-        font-size: 1.05rem;
         
         span {
             color: #f8b400;

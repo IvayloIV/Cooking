@@ -16,13 +16,23 @@ nav {
             &:hover {
                 color: #FFC11C;
             }
+    
+            @include mq(900) {
+                font-size: 1.1rem;
+                padding: 0.2rem 0.8rem;
+            }
+    
+            @include mq(750) {
+                font-size: 1.2rem;
+                padding: 0.8rem 0;
+            }
         }
         
         ul {
             display: flex;
             list-style: none;
             position: absolute;
-            top: 103%;
+            top: 101.7%;
             left: 0;
             background: white;
             width: 100%;
@@ -47,11 +57,21 @@ nav {
                         background: #FFC11C;
                         color: white;
                     }
+                    
+                    @include mq(750) {
+                        padding-left: 0.4rem;
+                        padding-right: 0.4rem;
+                    }
                 }
     
                 &:first-of-type a{
                     border-left: 2px solid #DBDBDB;
                 }
+            }
+            
+            @include mq(750) {
+                position: static;
+                display: none;
             }
         }
     
@@ -60,5 +80,10 @@ nav {
             transform: translateY(0);
             visibility: unset;
         }
+    }
+    
+    @include mq(750) {
+        display: none;
+        flex-basis: 100%;
     }
 }

@@ -1,0 +1,31 @@
+html {
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    margin: 0 auto;
+    max-width: 1600px;
+    
+    @include mq(1400) { font-size: 18px; }
+    @include mq(1000) { font-size: 16px; }
+    @include mq(700) { font-size: 14px; }
+}
+
+body, table, th, td, form, input, textarea, option, select {
+    font: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    font-size: 1.6rem;
+}
+
+h4 {
+    font-size: 1.5em;
+}
+
+p {
+    font-size: 1.05rem;
+}

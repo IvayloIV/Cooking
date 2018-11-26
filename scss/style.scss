@@ -9,7 +9,10 @@ $fa-font-path: "../fontawesome/webfonts";
 @import "../fontawesome/scss/regular";
 @import "../fontawesome/scss/solid";
 
+@import "mixins";
+@import "typography";
 @import "animations";
+
 @import "header";
 @import "navigation";
 @import "layout";
