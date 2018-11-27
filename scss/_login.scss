@@ -9,6 +9,19 @@
         border-radius: 0.5rem;
         box-shadow: 5px 5px 42px 4px rgba(0,0,0,0.23);
         background: white;
+        
+        @include mq(1100) {
+            width: 75%;
+        }
+    
+        @include mq(780) {
+            width: 85%;
+        }
+    
+        @include mq(600) {
+            width: 95%;
+            flex-direction: column;
+        }
     }
     
     #{&}-header {
@@ -24,18 +37,24 @@
         padding: 2rem 0;
         box-sizing: border-box;
         color: white;
+        
+        @include mq(600) {
+            width: 100%;
+            border-bottom-left-radius: 0;
+            border-top-right-radius: 0.5rem;
+        }
     
         h2 {
             font-family: 'Cookie', cursive;
             font-weight: 400;
-            font-size: 4rem;
+            font-size: 4em;
             flex: 1 0 auto;
             margin: 0;
         }
         
         p {
-            font-size: 1.2rem;
             font-style: italic;
+            margin: 1rem;
             
             span {
                 font-weight: 700;
@@ -43,14 +62,20 @@
         }
         
         i {
-            font-size: 2rem;
+            font-size: 2em;
         }
     }
     
     #{&}-content {
         padding: 6rem 2rem 4rem 2rem;
         width: 50%;
+        box-sizing: border-box;
         position: relative;
+    
+        @include mq(600) {
+            width: 100%;
+            padding: 4rem 2rem 3rem;
+        }
         
         label:not(:last-of-type) {
             display: block;
@@ -74,13 +99,13 @@
             
             i {
                 position: absolute;
-                font-size: 1.2rem;
+                font-size: 1.2em;
                 color: #4a4a4a;
                 border-right: 1px solid #757575;
                 display: block;
                 top: 0;
                 left: 0;
-                padding: 0.7rem;
+                padding: 0.8rem;
             }
         }
         
@@ -89,7 +114,6 @@
             text-align: center;
             display: block;
             margin-top: 3rem;
-            font-size: 1rem;
             cursor: pointer;
         }
         
@@ -126,10 +150,17 @@
                 transition: background 0.3s ease;
                 cursor: pointer;
                 padding: .8rem;
-                font-size: 1.1rem;
+                
+                @include mq(600) {
+                    padding: 1rem;
+                }
                 
                 &:first-of-type {
                     background: #48629c;
+                    
+                    @include mq(600) {
+                        border-bottom-left-radius: 0.5rem;
+                    }
                 }
                 
                 &:last-of-type {

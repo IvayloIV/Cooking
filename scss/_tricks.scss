@@ -3,18 +3,25 @@
     background-size: cover;
     text-align: center;
     color: white;
-    padding: 10rem 0;
+    padding: 8rem 0;
     
     h2 {
         letter-spacing: 1px;
-        font-size: 3rem;
+        font-size: 3em;
         margin: 0 0 0.6rem;
+        
+        @include mq(700) {
+            font-size: 2em;
+        }
     }
     
     p {
-        font-size: 1.3rem;
         width: 58%;
         margin: 0 auto;
+        
+        @include mq(890) {
+            width: 80%;
+        }
     }
     
     hr {
@@ -28,7 +35,14 @@
 .tricks > div:last-of-type{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 28rem);
+    
+    @include mq(380) {
+        grid-template-rows: inherit;
+    }
+    
+    @include mq(900) {
+        grid-template-columns: 1fr;
+    }
     
     img {
         width: 100%;
@@ -41,6 +55,11 @@
         box-sizing: border-box;
         overflow: hidden;
         position: relative;
+        
+        @include mq(380) {
+            grid-template-columns: 1fr;
+            padding-bottom: 1rem;
+        }
         
         &:after {
             display: block;
@@ -57,6 +76,10 @@
         
         div:first-of-type {
             height: 28rem;
+            
+            @include mq(380) {
+                height: 18rem;
+            }
         }
     
         $count: 3;
@@ -69,15 +92,43 @@
             }
             $count: $count + 2;
         }
+        
+        @include mq(900) {
+            &:nth-of-type(even) div:first-of-type{
+                order: 1;
+            }
+    
+            &:nth-of-type(odd) div:first-of-type{
+                order: 0;
+            }
+        }
+        
+        @include mq(380) {
+            &:nth-of-type(even) div:first-of-type{
+                order: 0;
+            }
+        }
     }
     
     div:last-of-type {
         padding: 0 3rem;
         align-self: center;
         
+        @include mq(1100) {
+            padding: 0 1rem;
+        }
+        
+        @include mq(900) {
+            padding: 0 2rem;
+        }
+    
+        @include mq(500) {
+            padding: 0 1rem;
+        }
+        
         h4 {
             color: #1A1C1E;
-            font-size: 2rem;
+            font-size: 2em;
             text-align: center;
             margin: 1.5rem 0;
         }
@@ -85,7 +136,6 @@
         p {
             color: #6a6c6e;
             line-height: 1.75;
-            font-size: 1.2rem;
             align-self: center;
         }
         

@@ -12,6 +12,10 @@
         text-align: center;
         font-weight: 800;
         text-transform: uppercase;
+        
+        @include mq(500) {
+            font-size: 2rem;
+        }
     }
     
     hr {
@@ -20,11 +24,27 @@
         border: 0;
         margin-top: 0.4rem;
         background: white;
+        
+        @include mq(600) {
+            width: 39%;
+        }
     }
 }
 
-.pizza-pictures > div:first-of-type hr { width: 16%; }
-.desserts-pictures > div:first-of-type hr { width: 21%; }
+.pizza-pictures > div:first-of-type hr {
+    width: 16%;
+    
+    @include mq(600) {
+        width: 35%;
+    }
+}
+.desserts-pictures > div:first-of-type hr {
+    width: 21%;
+    
+    @include mq(600) {
+        width: 45%;
+    }
+}
 
 .salads-pictures > div:last-of-type, .desserts-pictures > div:last-of-type {
     width: 96%;
@@ -34,10 +54,43 @@
     grid-gap: 1.4rem;
     padding-bottom: 4rem;
     
+    @include mq(650) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    @include mq(450) {
+        grid-template-columns: 1fr;
+    }
+    
     article {
         display: grid;
         grid-gap: 1.3rem;
         grid-auto-rows: min-content;
+        
+        @include mq(650) {
+            &:last-of-type {
+                grid-column: span 2;
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            align-self: center;
+        }
+    
+        @include mq(650) {
+            &:last-of-type {
+                grid-column: span 2;
+                grid-template-columns: repeat(2, 1fr);
+            }
+        
+            align-self: center;
+        }
+    
+        @include mq(450) {
+            &:last-of-type {
+                grid-column: inherit;
+                grid-template-columns: 1fr;
+            }
+        }
     }
     
     div {
@@ -45,6 +98,10 @@
         overflow: hidden;
         border-radius: 10px;
         cursor: pointer;
+        
+        @include mq(650) {
+            grid-column: span 1;
+        }
         
         &:after {
             display: flex;
@@ -54,12 +111,16 @@
             top: 0; left: 0; right: 0;
             border-radius: 10px;
             color: white;
-            font-size: 1.7rem;
+            font-size: 1.6rem;
             padding: 1rem 2rem;
             font-weight: 800;
             background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
             transform: translateY(-100%);
             transition: transform 0.45s ease;
+    
+            @include mq(1100) {font-size: 1.4em;}
+            
+            @include mq(450) {transform: translateY(0)}
         }
     
         &:hover img{
@@ -88,6 +149,38 @@
     width: 96%;
     margin: 0 auto 3rem;
     
+    @include mq(950) {
+        grid-template-columns: repeat(4, 1fr);
+        
+        & > div:nth-of-type(5) {
+            grid-row: span 2;
+        }
+        
+        & > div:last-of-type {
+            &:before {
+                padding-top: 33.33%;
+                
+                @include mq(450) {
+                    padding-top: 0;
+                }
+            }
+            
+            grid-column: span 2;
+        }
+    }
+    
+    @include mq(650) {
+        grid-template-columns: repeat(3,1fr);
+        
+        & > div:last-of-type {
+            grid-column: span 1;
+        }
+    }
+    
+    @include mq(450) {
+        grid-template-columns: 1fr;
+    }
+    
     div {
         position: relative;
         overflow: hidden;
@@ -108,12 +201,15 @@
             top: 0; left: 0; right: 0;
             border-radius: 10px;
             color: white;
-            font-size: 1.6rem;
+            font-size: 1.6em;
             padding: 1rem 2rem;
             font-weight: 800;
             background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
             transform: translateY(-100%);
             transition: transform 0.45s ease;
+            
+            @include mq(1100) {font-size: 1.4em;}
+            @include mq(450) {transform: translateY(0)}
         }
     
         &:hover img{
@@ -138,6 +234,11 @@
     .span-c2 {
         grid-column: span 2;
         grid-row: span 2;
+    
+        @include mq(450) {
+            grid-column: inherit;
+            grid-row: inherit;
+        }
     }
     
     .span-r2 {
@@ -146,10 +247,24 @@
         &:before {
             padding-top: 33.33%;
         }
+    
+        @include mq(450) {
+            grid-column: inherit;
+            grid-row: inherit;
+    
+            &:before {
+                padding-top: 0;
+            }
+        }
     }
     
     .span-c1 {
         grid-column: span 1;
         grid-row: span 2;
+    
+        @include mq(450) {
+            grid-column: inherit;
+            grid-row: inherit;
+        }
     }
 }

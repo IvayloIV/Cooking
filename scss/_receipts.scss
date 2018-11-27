@@ -214,6 +214,10 @@
             @include mq(700) {
                 top: -3.5rem;
             }
+    
+            @include mq(360) {
+                left: 2rem;
+            }
         }
         
         img {
