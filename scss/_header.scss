@@ -1,7 +1,6 @@
-header {
-    display: flex;
+.header {
+    @include flex(row, space-evenly);
     align-items: center;
-    justify-content: space-evenly;
     border-bottom: 2px solid #DBDBDB;
     position: relative;
     
@@ -15,7 +14,7 @@ header {
         color: #000;
     }
     
-    div {
+    #{&}-logo {
         display: grid;
         grid-template-columns: 15% auto;
         align-items: center;
@@ -25,27 +24,25 @@ header {
             grid-template-columns: 22% auto;
         }
         
-        @include mq(450) {
-            display: none;
+        @include mq(450) { display: none; }
+    
+        img {
+            width: 100%;
         }
-    }
     
-    img {
-        width: 100%;
-    }
-    
-    h1 {
-        text-transform: uppercase;
-        letter-spacing: 3px;
-        font-size: 2.4em;
-        margin: 1.3rem 0;
+        h1 {
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 2.4em;
+            margin: 1.3rem 0;
         
-        span {
-            color: #FFC11C;
+            span {
+                color: #FFC11C;
+            }
         }
     }
     
-    label {
+    #{&}-menu {
         display: none;
         width: 40%;
         text-align: right;
@@ -57,76 +54,15 @@ header {
             cursor: pointer;
         }
         
-        i:last-of-type {
+        i.fa-times {
             display: none;
         }
     
-        @include mq(750) {
-            display: block;
-        }
+        @include mq(750) { display: block; }
     
         @include mq(450) {
             width: 100%;
             text-align: center;
-        }
-    }
-}
-
-#nav {
-    display: none;
-    
-    @include mq(750) {
-        &:checked + header nav {
-            display: block;
-        
-            ul {
-                flex-direction: column;
-                margin: 0;
-            
-                li {
-                    text-align: center;
-                    border-top: 2px solid #dbdbdb;
-                }
-            
-                a {
-                    display: block;
-                    border-right: 0;
-                }
-            }
-        }
-    
-        &:checked + header label {
-            i:first-of-type {
-                display: none;
-            }
-        
-            i:last-of-type {
-                display: inline-block;
-            }
-        }
-    
-        &:checked + header .clicked {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            border-top: 2px solid #dbdbdb;
-            border-bottom: none;
-            
-            li, a {
-                border: none;
-                padding: 0.8rem 0;
-            }
-            
-            li {
-                border: 0;
-                padding: 0;
-                width: 33.33%;
-                margin: 0 auto;
-            }
-            
-            li:not(:last-of-type) a{
-                border-right: 2px solid #dbdbdb;
-            }
         }
     }
 }

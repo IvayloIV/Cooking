@@ -1,10 +1,9 @@
-$('body > header > nav > ul > li:nth-child(2) > a').on('click', function () {
-    let element = $('body > header > nav > ul > li:nth-child(2) > ul');
-    console.log(element);
+document.getElementById('receipt-menu').addEventListener('click', function () {
+    let element = document.getElementsByClassName('header-inner-nav')[0];
 
-    if (!element.hasClass('clicked')) {
-        element.addClass('clicked');
+    if (!element.classList.contains("clicked")) {
+        element.classList.add("clicked");
     } else {
-        element.removeClass('clicked');
+        element.classList.remove("clicked");
     }
 });

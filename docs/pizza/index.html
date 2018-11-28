@@ -4,28 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cooking</title>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <link rel="stylesheet" href="/Cooking/css/style.css">
 </head>
 <body>
     <input type="checkbox" id="nav">
-    <header>
-        <div>
+    <header class="header">
+        <div class="header-logo">
             <a href="/Cooking/"><img src="/Cooking/images/Chef-Logo.png" alt="chef-logo"></a>
             <h1><a href="/Cooking/"><span>Cook</span>ing</a></h1>
         </div>
 
-        <label for="nav">
+        <label for="nav" class="header-menu">
             <i class="fas fa-bars"></i>
             <i class="fas fa-times"></i>
             <span>Menu</span>
         </label>
 
         <nav>
-            <ul>
+            <ul class="header-nav">
                 <li><a href="/Cooking/">Home</a></li>
-                <li><a href="#">Receipts</a>
-                    <ul>
+                <li id="receipt-menu"><a href="#">Receipts</a>
+                    <ul class="header-inner-nav">
                         <li><a href="/Cooking/salads/">Salads</a></li>
                         <li><a href="/Cooking/pizza/">Pizza</a></li>
                         <li><a href="/Cooking/desserts/">Desserts</a></li>
@@ -60,8 +59,10 @@
             </div>
         </div>
         <div class="receipt-main">
-            <div><img src="/Cooking/images/Pizza/Crudo.jpg" alt="Crudo"></div>
-            <div>
+            <div class="receipt-main-image">
+                <img src="/Cooking/images/Pizza/Crudo.jpg" alt="Crudo">
+            </div>
+            <div class="receipt-main-products">
                 <h4>Products:</h4>
                 <ol type="1">
                     <li>320 g yellow cheese</li>
@@ -102,8 +103,10 @@
             </div>
         </div>
         <div class="receipt-main">
-            <div><img src="/Cooking/images/Pizza/Caprese.jpg" alt="Caprese"></div>
-            <div>
+            <div class="receipt-main-image">
+                <img src="/Cooking/images/Pizza/Caprese.jpg" alt="Caprese">
+            </div>
+            <div class="receipt-main-products">
                 <h4>Products:</h4>
                 <ol>
                     <li>100 - 150 g of slices bacon</li>
@@ -144,8 +147,10 @@
             </div>
         </div>
         <div class="receipt-main">
-            <div><img src="/Cooking/images/Pizza/Torino.jpg" alt="Torino"></div>
-            <div>
+            <div class="receipt-main-image">
+                <img src="/Cooking/images/Pizza/Torino.jpg" alt="Torino">
+            </div>
+            <div class="receipt-main-products">
                 <h4>Products:</h4>
                 <ol type="1">
                     <li>200 ml cooking  cream</li>

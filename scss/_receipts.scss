@@ -1,14 +1,6 @@
-.salads {
-    background: url("../images/Salads/background.jpg") no-repeat center fixed;
-}
-
-.pizza {
-    background: url("../images/Pizza/background2.jpg") no-repeat center fixed;
-}
-
-.desserts {
-    background: url("../images/Dessert/background.jpg") no-repeat center fixed;
-}
+.salads { background: url("../images/Salads/background.jpg") no-repeat center fixed; }
+.pizza { background: url("../images/Pizza/background2.jpg") no-repeat center fixed; }
+.desserts { background: url("../images/Dessert/background.jpg") no-repeat center fixed; }
 
 .receipt {
     background-size: cover;
@@ -16,34 +8,23 @@
     padding: 7rem 4rem 4rem 4rem;
     box-sizing: border-box;
     
-    @include mq(650) {
-        padding: 7rem 2rem 3rem 2rem;
-    }
+    @include mq(650) { padding: 7rem 1rem 2rem 1rem; }
     
-    @include mq(650) {
-        padding: 7rem 1rem 2rem 1rem;
-    }
-    
-    @at-root #{&}-header {
-        display: flex;
+    #{&}-header {
+        @include flex(row);
         align-items: center;
     
-        @include mq(900) {
-            flex-direction: column;
-        }
+        @include mq(900) { flex-direction: column; }
         
         ul {
-            display: flex;
+            @include flex(row, space-between);
             flex: 1 1 auto;
             list-style: none;
-            justify-content: space-between;
             border-bottom: 2px solid #646464;
             border-top: 2px solid #646464;
             padding: 0;
     
-            @include mq(900) {
-                width: 100%;
-            }
+            @include mq(900) { width: 100%; }
             
             @include mq(450) {
                 flex-direction: column;
@@ -53,9 +34,7 @@
             li:not(:last-of-type) {
                 border-right: 2px solid #646464;
                 
-                @include mq(450) {
-                    border-right: none;
-                }
+                @include mq(450) { border-right: none; }
             }
             
             li {
@@ -66,9 +45,7 @@
                 @include mq(450) {
                     border-bottom: 2px solid #646464;
         
-                    &:first-of-type {
-                        border-top: 2px solid #646464;
-                    }
+                    &:first-of-type { border-top: 2px solid #646464; }
                 }
             }
             
@@ -87,9 +64,8 @@
         }
     }
     
-    @at-root #{&}-main {
-        display: flex;
-        justify-content: space-evenly;
+    #{&}-main {
+        @include flex(row, space-evenly);
         padding-bottom: 2rem;
         width: 80%;
         margin: 0 auto;
@@ -99,40 +75,32 @@
             padding-bottom: 0.5rem;
         }
         
-        @include mq(450) {
-            width: 90%;
-        }
-        
-        & > div:first-of-type {
+        @include mq(450) { width: 90%; }
+    
+        @at-root #{&}-image {
             width: 56%;
             margin-top: 1rem;
             overflow: hidden;
             border-radius: 10px;
             
-            @include mq(900) {
-                width: 100%;
-            }
+            @include mq(900) { width: 100%; }
             
             &:hover img{
                 opacity: 0.7;
             }
         }
-        
-        & > div:last-of-type {
+    
+        @at-root #{&}-products {
             flex: 0 1 auto;
             box-sizing: border-box;
             
-            @include mq(900) {
-                text-align: center;
-            }
+            @include mq(900) { text-align: center; }
             
             ol {
                 list-style: none;
                 padding: 0 0 0 1rem;
                 
-                @include mq(900) {
-                    padding: 0;
-                }
+                @include mq(900) { padding: 0; }
             }
             
             h4 {
@@ -141,39 +109,12 @@
             
             li {
                 padding: 0.5rem 0 0.2rem 0;
+                font-size: 1.05em;
             }
             
             div {
                 text-align: right;
                 padding-right: 2rem;
-            }
-            
-            button {
-                border: 3px solid transparent;
-                padding: 0;
-                background: #FFC11C;
-                border-radius: 7px;
-                cursor: pointer;
-                outline: none;
-                transition: all 0.3s ease;
-                
-                a {
-                    text-decoration: none;
-                    color: white;
-                    font-weight: 700;
-                    padding: .7rem 1.2rem;
-                    display: block;
-                    transition: color 0.3s ease;
-                }
-    
-                &:hover {
-                    border: 3px solid #FFC11C;
-                    background: white;
-                    
-                    a {
-                        color: #FFC11C;
-                    }
-                }
             }
         }
     }
@@ -187,11 +128,9 @@
         margin-bottom: 7rem;
         border: 1px solid black;
         
-        @include mq(900) {
-            padding: 2rem 1rem;
-        }
+        @include mq(900) { padding: 2rem 1rem; }
         
-        &:nth-of-type(even) .receipt-main div:first-of-type{
+        &:nth-of-type(even) .receipt-main-image{
             order: 1;
             
             @include mq(900) {
@@ -211,13 +150,9 @@
             border: 1px solid black;
             border-bottom: 2px dotted black;
             
-            @include mq(700) {
-                top: -3.5rem;
-            }
+            @include mq(700) { top: -3.5rem; }
     
-            @include mq(360) {
-                left: 2rem;
-            }
+            @include mq(360) { left: 2rem; }
         }
         
         img {
@@ -225,13 +160,9 @@
             height: 315px;
             border-radius: 10px;
             
-            @include mq(700) {
-                height: 280px;
-            }
+            @include mq(700) { height: 280px; }
     
-            @include mq(450) {
-                height: 200px;
-            }
+            @include mq(450) { height: 200px; }
         }
         
         .votes {
@@ -256,13 +187,13 @@
                 color: #666161;
             }
         }
+        
+        &:last-of-type {
+            margin-bottom: 0;
+        }
     }
     
-    article:last-of-type {
-        margin-bottom: 0;
-    }
-    
-    @at-root #{&}-content {
+    #{&}-content {
         padding: 1.4rem 2rem 0 2rem;
         border-top: 2px dotted;
         
@@ -276,6 +207,7 @@
         
         li {
             padding: .5rem 0 .2rem;
+            font-size: 1.05em;
         }
     }
 }

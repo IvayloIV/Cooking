@@ -4,28 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cooking</title>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <link rel="stylesheet" href="/Cooking/css/style.css">
 </head>
 <body>
     <input type="checkbox" id="nav">
-    <header>
-        <div>
+    <header class="header">
+        <div class="header-logo">
             <a href="/Cooking/"><img src="/Cooking/images/Chef-Logo.png" alt="chef-logo"></a>
             <h1><a href="/Cooking/"><span>Cook</span>ing</a></h1>
         </div>
 
-        <label for="nav">
+        <label for="nav" class="header-menu">
             <i class="fas fa-bars"></i>
             <i class="fas fa-times"></i>
             <span>Menu</span>
         </label>
 
         <nav>
-            <ul>
+            <ul class="header-nav">
                 <li><a href="/Cooking/">Home</a></li>
-                <li><a href="#">Receipts</a>
-                    <ul>
+                <li id="receipt-menu"><a href="#">Receipts</a>
+                    <ul class="header-inner-nav">
                         <li><a href="/Cooking/salads/">Salads</a></li>
                         <li><a href="/Cooking/pizza/">Pizza</a></li>
                         <li><a href="/Cooking/desserts/">Desserts</a></li>
@@ -41,87 +40,107 @@
 
     <main>
         <section class="tricks">
-    <div>
+    <div class="tricks-title">
         <h2>Tricks</h2>
         <hr>
         <p>The most famous Bulgarian chefs have revealed to us the finer tricks of cooking. They are easy and convenient to use and at the same time the dishes are always successful and very tasty. Let's trust them!</p>
     </div>
-    <div>
+    <div class="tricks-articles">
         <article>
-            <div><img src="/Cooking/images/Tricks/cauliflower.jpg" alt="cauliflower"></div>
-            <div>
+            <div class="tricks-articles-picture">
+                <img src="/Cooking/images/Tricks/cauliflower.jpg" alt="cauliflower">
+            </div>
+            <div class="tricks-articles-content">
                 <h4>Cauliflower</h4>
                 <p>If the cauliflower is bumped incorrectly, then it loses its beautiful appearance, and nobody likes to eat that kind of food. To prevent this, add sugar to the water when it boils.</p>
                 <span>chef Ivanov</span>
             </div>
         </article>
         <article>
-            <div><img src="/Cooking/images/Tricks/frying-meat.jpg" alt="rying-meat"></div>
-            <div>
+            <div class="tricks-articles-picture">
+                <img src="/Cooking/images/Tricks/frying-meat.jpg" alt="rying-meat">
+            </div>
+            <div class="tricks-articles-content">
                 <h4>Frying meat</h4>
                 <p>When frying meat it gets very hard. To avoid it, wait for the fat to get hot enough and use a thick bottom pan. So it will quickly be sealed, that is, the juice will not leak out of it and will remain fragile.</p>
                 <span>chef Petrov</span>
             </div>
         </article>
         <article>
-            <div><img src="/Cooking/images/Tricks/beans.jpg" alt="bob"></div>
-            <div>
+            <div class="tricks-articles-picture">
+                <img src="/Cooking/images/Tricks/beans.jpg" alt="bob">
+            </div>
+            <div class="tricks-articles-content">
                 <h4>Beans</h4>
                 <p>In order not to hurt our stomach, beautify the beans in cold water for 8-10 hours before cooking and add to the boiling it is a tablespoon soda bicarbonate.</p>
                 <span>chef Naidenov</span>
             </div>
         </article>
         <article>
-            <div><img src="/Cooking/images/Tricks/onion.jpg" alt="onion"></div>
-            <div>
+            <div class="tricks-articles-picture">
+                <img src="/Cooking/images/Tricks/onion.jpg" alt="onion">
+            </div>
+            <div class="tricks-articles-content">
                 <h4>Onion</h4>
                 <p>You will keep the shape of fried whole onions and you will also improve their taste if you immerse them in a mixed with a little salt flour.</p>
                 <span>chef Nikolaev</span>
             </div>
         </article>
         <article>
-            <div><img src="/Cooking/images/Tricks/eggplant.jpg" alt="eggplant"></div>
-            <div>
+            <div class="tricks-articles-picture">
+                <img src="/Cooking/images/Tricks/eggplant.jpg" alt="eggplant">
+            </div>
+            <div class="tricks-articles-content">
                 <h4>Eggplant</h4>
                 <p>The eggplant contains a substance called solanine, which makes it hot, especially if the eggplant is old. Let it stand for 20-30 minutes to make sure that the bitterness comes out.</p>
                 <span>chef Naidenov</span>
             </div>
         </article>
         <article>
-            <div><img src="/Cooking/images/Tricks/pasta.jpg" alt="pasta"></div>
-            <div>
+            <div class="tricks-articles-picture">
+                <img src="/Cooking/images/Tricks/pasta.jpg" alt="pasta">
+            </div>
+            <div class="tricks-articles-content">
                 <h4>Pasta</h4>
                 <p>Always cook pasta one minute less than necessary as it further softens when you add sauce. Put the paste in boiling water and add a spoonful of oil.</p>
                 <span>chef Petrov</span>
             </div>
         </article>
         <article>
-            <div><img src="/Cooking/images/Tricks/tomatoes.jpg" alt="tomatoes"></div>
-            <div>
+            <div class="tricks-articles-picture">
+                <img src="/Cooking/images/Tricks/tomatoes.jpg" alt="tomatoes">
+            </div>
+            <div class="tricks-articles-content">
                 <h4>Tomatoes</h4>
                 <p>Before cutting the vegetables, put some salt on the board. So you better control their movement. Vegetables cut off shortly before being cooked.</p>
                 <span>chef Manchev</span>
             </div>
         </article>
         <article>
-            <div><img src="/Cooking/images/Tricks/chicken.jpg" alt="chicken"></div>
-            <div>
+            <div class="tricks-articles-picture">
+                <img src="/Cooking/images/Tricks/chicken.jpg" alt="chicken">
+            </div>
+            <div class="tricks-articles-content">
                 <h4>Chicken</h4>
                 <p>Never fry a chicken with garlic because it will completely remove the taste and smell of the chicken. Add salt to the end of cooking.</p>
                 <span>chef Georgiev</span>
             </div>
         </article>
         <article>
-            <div><img src="/Cooking/images/Tricks/oil.jpg" alt="oil"></div>
-            <div>
+            <div class="tricks-articles-picture">
+                <img src="/Cooking/images/Tricks/oil.jpg" alt="oil">
+            </div>
+            <div class="tricks-articles-content">
                 <h4>Oil</h4>
                 <p>Always buy quality olive oil. Bad oil can completely destroy the taste. Olive oil adds flavor to the dish and improves gustatory qualities.</p>
                 <span>chef Mihalkov</span>
             </div>
         </article>
         <article>
-            <div><img src="/Cooking/images/Tricks/pumpkin.jpg" alt="pumpkin"></div>
-            <div>
+            <div class="tricks-articles-picture">
+                <img src="/Cooking/images/Tricks/pumpkin.jpg" alt="pumpkin">
+            </div>
+            <div class="tricks-articles-content">
                 <h4>Pumpkin</h4>
                 <p>Pumpkin puree will not only get delicious but also very fast if you prepare it in the microwave oven. Immerse it for 10 minutes in hot water.</p>
                 <span>chef Trifonov</span>

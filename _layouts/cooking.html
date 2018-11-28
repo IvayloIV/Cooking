@@ -4,28 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{site.title}}</title>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <link rel="stylesheet" href="{{site.baseurl}}/css/style.css">
 </head>
 <body>
     <input type="checkbox" id="nav">
-    <header>
-        <div>
+    <header class="header">
+        <div class="header-logo">
             <a href="{{site.baseurl}}/"><img src="{{site.baseurl}}/images/Chef-Logo.png" alt="chef-logo"></a>
             <h1><a href="{{site.baseurl}}/"><span>Cook</span>ing</a></h1>
         </div>
 
-        <label for="nav">
+        <label for="nav" class="header-menu">
             <i class="fas fa-bars"></i>
             <i class="fas fa-times"></i>
             <span>Menu</span>
         </label>
 
         <nav>
-            <ul>
+            <ul class="header-nav">
                 <li><a href="{{site.baseurl}}/">Home</a></li>
-                <li><a href="#">Receipts</a>
-                    <ul>
+                <li id="receipt-menu"><a href="#">Receipts</a>
+                    <ul class="header-inner-nav">
                         <li><a href="{{site.baseurl}}/salads/">Salads</a></li>
                         <li><a href="{{site.baseurl}}/pizza/">Pizza</a></li>
                         <li><a href="{{site.baseurl}}/desserts/">Desserts</a></li>
