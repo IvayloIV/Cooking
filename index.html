@@ -45,7 +45,7 @@ layout: cooking
                         <span>{{post.rating}} ({{post.votes}})</span>
                     </p>
                     <p>{{ post.description | truncatewords:24 }}</p>
-                    <a href="{{post.url}}"><button>Read More</button></a>
+                    <a href="{{ site.baseurl }}{{post.url}}"><button>Read More</button></a>
                 </div>
             </article>
         {% endfor %}
