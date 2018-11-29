@@ -1,6 +1,14 @@
-.salads { background: url("../images/Salads/background.jpg") no-repeat center fixed; }
-.pizza { background: url("../images/Pizza/background2.jpg") no-repeat center fixed; }
-.desserts { background: url("../images/Dessert/background.jpg") no-repeat center fixed; }
+$map: (
+    salads: 'Salads/background.jpg',
+    pizza: 'Pizza/background2.jpg',
+    desserts: 'Dessert/background.jpg'
+);
+
+@each $selector, $img in $map {
+    .#{$selector} {
+        background: url("../images/#{$img}") no-repeat center fixed;
+    }
+}
 
 .receipt {
     background-size: cover;

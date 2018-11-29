@@ -1,0 +1,56 @@
+$map: (
+    skebe-corba: 'soup.jpg',
+    vegetarian-pasta: 'pasta.jpg',
+    musaka: 'musaka.jpg',
+    banana-cake: 'banana-cake.jpg',
+    tomato-soup: 'tomato-soup.jpg',
+    roasted-mushrooms: 'roasted-vegetable-food-mushrooms.jpg'
+);
+
+@each $selector, $img in $map {
+    .#{$selector} {
+        background:  linear-gradient(rgba(black, 0.1), rgba(black, 0.1)), url("../images/#{$img}") no-repeat center;
+    }
+}
+
+.dish {
+    background-size: cover;
+    position: relative;
+    height: 37rem;
+    
+    article {
+        width: 40%;
+        text-align: center;
+        background: rgba(white, .85);
+        box-shadow: 0 0 40px 0 rgba(black, 0.75);
+        padding: 2rem;
+        position: absolute;
+        top: 6rem; left: 5rem;
+        animation: slideup 0.8s ease forwards;
+        
+        $sizes: (930: 50%, 720: 60%, 530: 70%, 400: 85%);
+    
+        @each $limit, $width in $sizes {
+            @include mq($limit) {
+                width: $width;
+            }
+        }
+    
+        @include mq(530) { position: static; }
+    
+        @include mq(400) { padding: 1rem; }
+    }
+    
+    @include mq(530) {
+        @include flex(column, center);
+        align-items: center;
+    }
+    
+    h2 {
+        border-bottom: 3px solid #e00030;
+        padding-bottom: 1rem;
+        font-weight: 400;
+        font-size: 2em;
+        margin-top: 0.5rem;
+    }
+}
