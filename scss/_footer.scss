@@ -74,8 +74,8 @@
         input[type="submit"] {
             padding: 0.84rem;
             border: 0;
-            color: white;
-            background: #f8b400;
+            color: var(--footer-button-color, #fff);
+            background: var(--footer-button-background, #f8b400);
             border-top-right-radius: 10px;
             border-bottom-right-radius: 10px;
             font-weight: 700;

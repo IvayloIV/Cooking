@@ -1,52 +1,64 @@
-.salads-pictures > div:first-of-type, .pizza-pictures > div:first-of-type, .desserts-pictures > div:first-of-type {
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/logo1.jpg") no-repeat center;
+%after-block {
+    @include flex(row, flex-start);
+    align-items: flex-end;
+    content: attr(data-attr);
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    border-radius: 10px;
+    color: white;
+    font-size: 1.4rem;
+    padding: 1rem 2rem;
+    font-weight: 800;
+    background: linear-gradient(rgba(black, 0.4), rgba(black, 0.4));
+    transform: translateY(-100%);
+    transition: transform 0.45s ease;
+    
+    @include mq(1100) { font-size: 1.4em; }
+    
+    @include mq(450) { transform: translateY(0); }
+}
+
+.salads-pictures-title,
+.pizza-pictures-title,
+.desserts-pictures-title {
+    background: linear-gradient(rgba(black, 0.3), rgba(black, 0.3)), url("../images/logo1.jpg") no-repeat center;
     background-size: cover;
     padding: 7rem 0;
     margin: 0 0 3rem;
     
     h2 {
         letter-spacing: 2px;
-        font-size: 2.4rem;
+        font-size: 2.2rem;
         color: white;
         margin: 0;
         text-align: center;
         font-weight: 800;
         text-transform: uppercase;
         
-        @include mq(500) {
-            font-size: 2rem;
-        }
+        @include mq(500) {  font-size: 2rem; }
     }
     
     hr {
-        width: 18%;
-        height: 2px;
-        border: 0;
+        @include hr(18%, white);
         margin-top: 0.4rem;
-        background: white;
         
-        @include mq(600) {
-            width: 39%;
-        }
+        @include mq(600) {  width: 39%; }
     }
 }
 
-.pizza-pictures > div:first-of-type hr {
-    width: 16%;
-    
-    @include mq(600) {
-        width: 35%;
-    }
-}
-.desserts-pictures > div:first-of-type hr {
+.desserts-pictures hr {
     width: 21%;
     
-    @include mq(600) {
-        width: 45%;
-    }
+    @include mq(600) {  width: 45%; }
 }
 
-.salads-pictures > div:last-of-type, .desserts-pictures > div:last-of-type {
+.pizza-pictures hr {
+    width: 16%;
+    
+    @include mq(600) { width: 35%; }
+}
+
+.salads-pictures-gallery, .desserts-pictures-gallery {
     width: 96%;
     margin: 0 auto;
     display: grid;
@@ -54,27 +66,14 @@
     grid-gap: 1.4rem;
     padding-bottom: 4rem;
     
-    @include mq(650) {
-        grid-template-columns: repeat(2, 1fr);
-    }
+    @include mq(650) { grid-template-columns: repeat(2, 1fr); }
     
-    @include mq(450) {
-        grid-template-columns: 1fr;
-    }
+    @include mq(450) { grid-template-columns: 1fr; }
     
     article {
         display: grid;
         grid-gap: 1.3rem;
         grid-auto-rows: min-content;
-        
-        @include mq(650) {
-            &:last-of-type {
-                grid-column: span 2;
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            align-self: center;
-        }
     
         @include mq(650) {
             &:last-of-type {
@@ -99,33 +98,14 @@
         border-radius: 10px;
         cursor: pointer;
         
-        @include mq(650) {
-            grid-column: span 1;
-        }
+        @include mq(650) { grid-column: span 1; }
         
         &:after {
-            display: flex;
-            align-items: flex-end;
-            content: attr(data-attr);
-            position: absolute;
-            top: 0; left: 0; right: 0;
-            border-radius: 10px;
-            color: white;
-            font-size: 1.6rem;
-            padding: 1rem 2rem;
-            font-weight: 800;
-            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
-            transform: translateY(-100%);
-            transition: transform 0.45s ease;
-    
-            @include mq(1100) {font-size: 1.4em;}
-            
-            @include mq(450) {transform: translateY(0)}
+            @extend %after-block;
         }
     
         &:hover img{
             transform: scale(1.1);
-            //opacity: 0.7;
         }
         
         &:hover:after {
@@ -141,7 +121,7 @@
     }
 }
 
-.pizza-pictures > div:last-of-type{
+.pizza-pictures-gallery {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-gap: 1.3rem;
@@ -187,34 +167,14 @@
         border-radius: 10px;
         cursor: pointer;
         
-        &:before {
-            display: block;
-            content: '';
-            padding-top: 100%;
-        }
+        &:before { @include padding-block(100%); }
     
         &:after {
-            display: flex;
-            align-items: flex-end;
-            content: attr(data-attr);
-            position: absolute;
-            top: 0; left: 0; right: 0;
-            border-radius: 10px;
-            color: white;
-            font-size: 1.6em;
-            padding: 1rem 2rem;
-            font-weight: 800;
-            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
-            transform: translateY(-100%);
-            transition: transform 0.45s ease;
-            
-            @include mq(1100) {font-size: 1.4em;}
-            @include mq(450) {transform: translateY(0)}
+            @extend %after-block;
         }
     
         &:hover img{
             transform: scale(1.1);
-            //opacity: 0.7;
         }
     
         &:hover:after {

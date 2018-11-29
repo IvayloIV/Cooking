@@ -20,8 +20,8 @@
             @include flex(row, space-between);
             flex: 1 1 auto;
             list-style: none;
-            border-bottom: 2px solid #646464;
-            border-top: 2px solid #646464;
+            border-bottom: 2px solid var(--receipt-header-color, #646464);
+            border-top: 2px solid var(--receipt-header-color, #646464);
             padding: 0;
     
             @include mq(900) { width: 100%; }
@@ -32,7 +32,7 @@
             }
     
             li:not(:last-of-type) {
-                border-right: 2px solid #646464;
+                border-right: 2px solid var(--receipt-header-color, #646464);
                 
                 @include mq(450) { border-right: none; }
             }
@@ -43,9 +43,9 @@
                 text-align: center;
     
                 @include mq(450) {
-                    border-bottom: 2px solid #646464;
+                    border-bottom: 2px solid var(--receipt-header-color, #646464);
         
-                    &:first-of-type { border-top: 2px solid #646464; }
+                    &:first-of-type { border-top: 2px solid var(--receipt-header-color, #646464); }
                 }
             }
             

@@ -5,12 +5,10 @@
     img {
         width: 37%;
         
-        @include mq(450) {
-            width: 50%;
-        }
+        @include mq(450) { width: 50%; }
     }
     
-    & > div {
+    #{&}-form {
         width: 40%;
         margin: 0 auto;
         background: rgba(255,255,255,.8);
@@ -19,25 +17,16 @@
         box-sizing: border-box;
         position: relative;
         
-        @include mq(1100) {
-            width: 50%;
-        }
-        
-        @include mq(810) {
-            width: 60%;
-        }
-        
-        @include mq(620) {
-            width: 80%;
+        $size: (1100: 50%, 810: 60%, 620: 80%, 420: 90%, 350: 95%);
+    
+        @each $limit, $width in $size {
+            @include mq($limit) {
+                width: #{$width};
+            }
         }
         
         @include mq(420) {
-            width: 90%;
-            padding-bottom: 6rem;
-        }
-        
-        @include mq(350) {
-            width: 95%;
+            padding: 2.5rem 2.5rem 6rem;
         }
     }
     
@@ -45,29 +34,22 @@
         text-align: center;
         
         h2 {
-            font-family: 'Cookie', cursive;
-            font-size: 3.3em;
             font-weight: 400;
             margin: 1rem 0 0.5rem;
         }
     }
     
     form {
-        & div:first-of-type {
-            display: flex;
-            flex-direction: row;
+        .names {
+            @include flex(row);
     
             label:first-of-type {
                 border-right: 2px solid #333;
                 
-                @include mq(420) {
-                    border-right: 0;
-                }
+                @include mq(420) { border-right: 0; }
             }
             
-            @include mq(420) {
-                flex-direction: column;
-            }
+            @include mq(420) { flex-direction: column; }
         }
     
         span {
@@ -83,7 +65,10 @@
             margin-top: 1.1rem;
             width: 100%;
             
-            input[type="text"], input[type="password"], input[type="email"], input[type="number"] {
+            input[type="text"],
+            input[type="password"],
+            input[type="email"],
+            input[type="number"] {
                 background: transparent;
                 border: none;
                 border-bottom: 2px solid #676565;
@@ -97,27 +82,23 @@
             }
         }
     
-        & > div:nth-child(1) > label:nth-child(2) {
+        .names label:nth-child(2) {
             span {
                 margin-left: 0.8rem;
-    
+        
                 @include mq(420) {
                     margin-left: 0;
                 }
             }
-        
-            input {
-                padding-left: 1.2rem;
     
+            input {
+                padding-left: 1rem;
+        
                 @include mq(420) {
                     padding-left: 0.3rem;
                     padding-right: 0.3rem;
                 }
             }
-        }
-        
-        label.container:first-of-type {
-            border-right: 0;
         }
     
         .container {
@@ -129,12 +110,22 @@
             text-align: left;
             font-size: 1.1em;
             user-select: none;
-        }
+            width: min-content;
     
-        .container input {
-            position: absolute;
-            opacity: 0;
-            cursor: pointer;
+            input {
+                position: absolute;
+                opacity: 0;
+                cursor: pointer;
+            }
+    
+            .checkmark:after {
+                left: 3px;
+                top: 3px;
+                width: 0.95rem;
+                height: 0.95rem;
+                border-radius: 50%;
+                background: #918f8f;
+            }
         }
     
         .checkmark {
@@ -146,29 +137,21 @@
             background-color: rgba(255,255,255,0.7);
             border-radius: 50%;
             border: 4px solid #7d7979;
+            margin: 0;
+            
+            &:after {
+                content: "";
+                position: absolute;
+                display: none;
+            }
         }
     
-        .checkmark:after {
-            content: "";
-            position: absolute;
-            display: none;
-        }
-    
-        .container input:checked ~ .checkmark:after {
+        .container input:checked + .checkmark:after {
             display: block;
-        }
-    
-        .container .checkmark:after {
-            left: 3px;
-            top: 3px;
-            width: 0.95rem;
-            height: 0.95rem;
-            border-radius: 50%;
-            background: #918f8f;
         }
         
         .gender {
-            span.checkmark {
+            .checkmark {
                 margin: 0;
             }
             
@@ -179,29 +162,24 @@
                 margin-left: 0;
             }
             
-            label {
-                padding-bottom: 0.3rem;
-                margin-top: 0;
-                margin-left: 0;
+            .type-gender {
+                margin: 0;
             }
             
-            div {
-                flex-direction: column;
+            label {
+                padding-bottom: 0.3rem;
+                margin: 0.5rem 0.6rem;
+                box-sizing: border-box;
+            }
+            
+            & > div {
+                @include flex(column);
                 
                 span {
                     text-transform: initial;
                     font-size: 1.1rem;
                     font-weight: 500;
                 }
-            }
-    
-            div > label:nth-child(1) {
-                border-right: 0;
-            }
-    
-            label {
-                margin: 0.5rem 0.6rem;
-                box-sizing: border-box;
             }
         }
         
@@ -245,15 +223,13 @@
     }
     
     #{&}-footer {
-        display: flex;
+        @include flex(row);
         position: absolute;
         bottom: 0;
         left: 0;
         right: 0;
         
-        @include mq(420) {
-            flex-direction: column;
-        }
+        @include mq(420) {  flex-direction: column; }
     
         div {
             width: 50%;
@@ -263,19 +239,17 @@
             cursor: pointer;
             transition: background-color 0.3s ease;
     
-            @include mq(420) {
-                width: 100%;
-            }
+            @include mq(420) { width: 100%; }
             
             i {
                 margin-right: 0.3rem;
             }
             
-            &:first-of-type {
+            &.fb-button {
                 background-color: #48629C;
             }
     
-            &:last-of-type {
+            &.google-button {
                 background-color: #DB4B38;
             }
             
@@ -284,10 +258,4 @@
             }
         }
     }
-}
-
-body > main > section > div > form > label.container > span.checkmark,
-body > main > section > div > form > div.gender > label > span:nth-child(3),
-body > main > section > div > form > label.container > span:nth-child(3) {
-    margin: 0;
 }

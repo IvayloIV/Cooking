@@ -5,13 +5,13 @@ permalink: /register/
 ---
 
 <section class="register">
-    <div>
+    <div class="register-form">
         <div class="register-header">
             <div><img src="{{site.baseurl}}/images/register-logo.png" alt="logo"></div>
             <h2>Register</h2>
         </div>
         <form action="#">
-            <div>
+            <div class="names">
                 <label>
                     <span>First name</span>
                     <input type="text" name="first-name">
@@ -40,24 +40,28 @@ permalink: /register/
             <div class="gender">
                 <span>Gender</span>
                 <div>
-                    <label class="container">
-                        <input type="radio" name="gender">
-                        <span class="checkmark"></span>
-                        <span>Man</span>
-                    </label>
-                    <label class="container">
-                        <input type="radio" name="gender">
-                        <span class="checkmark"></span>
-                        <span>Woman</span>
-                    </label>
+                    <div>
+                        <label class="container">
+                            <input type="radio" name="gender">
+                            <span class="checkmark"></span>
+                            <span class="type-gender">Man</span>
+                        </label>
+                    </div>
+                    <div>
+                        <label class="container">
+                            <input type="radio" name="gender">
+                            <span class="checkmark"></span>
+                            <span class="type-gender">Woman</span>
+                        </label>
+                    </div>
                 </div>
             </div>
             <input type="submit" value="Register">
         </form>
         <p><a href="{{site.baseurl}}/login/">Already have registration? <i class="fas fa-arrow-right"></i></a></p>
         <div class="register-footer">
-            <div><i class="fab fa-facebook-f"></i> Log in with Facebook</div>
-            <div><i class="fab fa-google-plus-g"></i> Log in with Google+</div>
+            <div class="fb-button"><i class="fab fa-facebook-f"></i> Log in with Facebook</div>
+            <div class="google-button"><i class="fab fa-google-plus-g"></i> Log in with Google+</div>
         </div>
     </div>
 </section>

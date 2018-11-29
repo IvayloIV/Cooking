@@ -6,16 +6,6 @@
     }
 }
 
-@mixin aspect-ratio($width, $height) {
-    $ration: unquote(($height / $width * 100) + "%");
-    
-    &:before {
-        display: block;
-        content: '';
-        padding-top: #{$ration};
-    }
-}
-
 @mixin flex($direction, $justify-content: initial) {
     display: flex;
     flex-direction: $direction;
