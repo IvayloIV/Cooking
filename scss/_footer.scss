@@ -2,12 +2,15 @@
     @include flex(row, space-evenly);
     flex-wrap: wrap;
     padding: 3rem 0 5rem 0;
-    background: #e2e2e2 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23000000' fill-opacity='0.3' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+    background: linear-gradient(to bottom,rgba(255,255,255,.8) 0%,rgba(226,226,226,.8) 100%),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23000000' fill-opacity='1' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+    border-top: 3px solid #eaeaea;
     
     @include mq(855) { padding-bottom: 2rem; }
     @include mq(660) { flex-direction: column; }
     
     article {
+        padding: 0 1rem;
+        
         @include mq(660) {
             width: 65%;
             margin: 1rem auto;
@@ -69,6 +72,10 @@
             &:focus::placeholder {
                 color: transparent;
             }
+            
+            @include mq(350) {
+                width: 48%;
+            }
         }
         
         input[type="submit"] {
@@ -107,6 +114,10 @@
             align-items: center;
             margin: 0.3rem;
             cursor: pointer;
+            
+            &:hover {
+                animation: bounce 0.1s ease infinite;
+            }
         }
     
         $color-collection: (#3B559F, #1DA1F2, #ac0808, #0077B5);
@@ -123,7 +134,8 @@
     p {
         text-align: center;
         color: #fff;
-        background: #7f7f7f;
+        background: #a2a1a194;
+        text-shadow: 2px 2px 1px rgba(150, 150, 150, 1);
         margin: 0;
         padding: 1.1rem 0;
         font-weight: 600;

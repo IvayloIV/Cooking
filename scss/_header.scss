@@ -18,6 +18,7 @@
         display: grid;
         grid-template-columns: 15% auto;
         align-items: center;
+        animation: slideleft 0.6s ease forwards;
         
         @include mq(750) {
             flex: 1 0;

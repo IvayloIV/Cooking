@@ -8,3 +8,23 @@
         transform: translateY(0) scale(1);
     }
 }
+
+@keyframes slideleft {
+    from {
+        opacity: 0;
+        transform: translateX(-15rem) scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+@keyframes bounce {
+    from {
+        transform: translateX(-0.1rem);
+    }
+    to {
+        transform: translateX(0.1rem);
+    }
+}

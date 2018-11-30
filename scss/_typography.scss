@@ -1,13 +1,17 @@
 html {
     font-family: var(--main-font, sans-serif);
     font-size: var(--main-font-size);
-    margin: 0 auto;
-    max-width: 1700px;
+    line-height: 1.2;
     
     @include mq(1600) { font-size: 20px; }
     @include mq(1400) { font-size: 18px; }
     @include mq(1000) { font-size: 16px; }
     @include mq(700) { font-size: 14px; }
+}
+
+main {
+    max-width: 1920px;
+    margin: 0 auto;
 }
 
 body, table, th, td, form, input, textarea, option, select {
