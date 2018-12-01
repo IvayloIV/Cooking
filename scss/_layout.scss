@@ -266,7 +266,9 @@
         }
     
         hr {
-            @include hr(23%);
+            @include hr(18%);
+            
+            @include mq(500) { width: 30%; }
         }
     }
     
@@ -291,7 +293,7 @@
                 margin: 1rem auto;
             }
             
-            @include  mq(550){
+            @include  mq(500){
                 width: 90%;
             }
             
