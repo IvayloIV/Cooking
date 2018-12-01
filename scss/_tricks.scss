@@ -5,10 +5,11 @@
         text-align: center;
         color: white;
         padding: 8rem 0;
+        font-size: 1.05em;
         
         h2 {
             letter-spacing: 1px;
-            font-size: 3em;
+            font-size: 2.8em;
             margin: 0 0 0.6rem;
             
             @include mq(700) { font-size: 2em; }
@@ -99,6 +100,7 @@
         @at-root #{&}-content {
             padding: 0 3rem;
             align-self: center;
+            font-size: 1.05em;
             
             @include mq(1200) { padding: 0 1rem; }
             
@@ -108,7 +110,7 @@
             
             h4 {
                 color: #1A1C1E;
-                font-size: 2em;
+                font-size: 1.90em;
                 text-align: center;
                 margin: 1.5rem 0;
             }

@@ -58,7 +58,7 @@
             display: none;
         }
     
-        @include mq(750) { display: block; }
+        @include mq(800) { display: block; }
     
         @include mq(450) {
             width: 100%;

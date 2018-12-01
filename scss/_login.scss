@@ -34,6 +34,7 @@
         text-align: center;
         padding: 2rem 0;
         box-sizing: border-box;
+        font-size: 1.05em;
         color: white;
         
         @include mq(600) {
@@ -58,7 +59,7 @@
         }
         
         i {
-            font-size: 2em;
+            font-size: 1.95em;
         }
     }
     
@@ -87,10 +88,6 @@
                 &:focus::placeholder {
                     color: transparent;
                 }
-            }
-            
-            ::placeholder {
-                font-size: 1rem;
             }
             
             i {

@@ -13,6 +13,7 @@
         margin: 0 auto;
         padding: 9.6rem 0 15.6rem 0;
         color: white;
+        font-size: 1.6em;
         
         @include mq(710) {
             padding: 8.6rem 0 14.6rem 0;
@@ -21,23 +22,30 @@
     
     h2 {
         letter-spacing: 5px;
-        font-size: 3.7em;
+        font-size: 2.35em;
         margin: 0 0 0.6rem;
     }
     
     p {
-        font-size: 1.6em;
         font-style: italic;
         letter-spacing: 3px;
         margin: 0;
     }
     
-    hr { @include hr(26%, white); }
+    hr {
+        @include hr(26%, white);
+        margin: 0.5rem auto;
+        
+        @include mq(550) {
+            width: 35%;
+        }
+    }
 }
 
 .about-us {
     text-align: center;
     padding: 4rem 0;
+    font-size: 1.04em;
     
     h2 { @extend %main-h2; }
     
@@ -48,7 +56,6 @@
             color: #C8C6C4;
             margin-top: 0.3%;
             font-style: italic;
-            font-size: 1.1em;
         }
     }
     
@@ -91,8 +98,6 @@
         
             @include mq(850) { width: 40%; }
             @include mq(500) { width: 90%; }
-        
-            p { font-size: 1em; }
         }
     
         div:first-of-type {
@@ -203,6 +208,7 @@
             overflow: hidden;
             cursor: pointer;
             border-radius: 12px;
+            font-size: 2em;
     
             @include mq(700) {
                 width: 70%;
@@ -222,7 +228,6 @@
                 position: absolute;
                 top: 0; left: 0; bottom: 0; right: 0;
                 background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-                font-size: 2em;
                 font-weight: 700;
                 color: #eeecea;
                 align-items: center;
@@ -306,7 +311,6 @@
                 color: #7A7A7A;
                 font-style: italic;
                 margin-bottom: 0;
-                font-size: 1em;
             }
     
             div {

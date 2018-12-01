@@ -4,6 +4,7 @@
     padding: 3rem 0 5rem 0;
     background: linear-gradient(to bottom,rgba(255,255,255,.8) 0%,rgba(226,226,226,.8) 100%),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23000000' fill-opacity='1' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
     border-top: 3px solid #eaeaea;
+    font-size: 1.14em;
     
     @include mq(855) { padding-bottom: 2rem; }
     @include mq(660) { flex-direction: column; }
@@ -21,7 +22,7 @@
     
     h3 {
         color: #37393b;
-        font-size: 1.6rem;
+        font-size: 1.4em;
         margin: 0.5rem 0;
     }
     
@@ -35,7 +36,6 @@
                 position: relative;
                 padding-left: 2.2rem;
                 margin-bottom: 1rem;
-                font-size: 1.1rem;
                 color: #2a292a;
                 
                 span {
@@ -57,9 +57,9 @@
         }
         
         input[type="email"] {
-            padding: 0.9rem 0.9rem 0.9rem 1rem;
+            padding: 0.8rem 0.8rem 0.8rem 1rem;
             border: none;
-            font-size: 0.9rem;
+            font-size: 1.1rem;
             outline: none;
             border-top-left-radius: 10px;
             border-bottom-left-radius: 10px;
@@ -67,6 +67,7 @@
             
             &::placeholder {
                 font-style: italic;
+                font-size: 0.85em;
             }
     
             &:focus::placeholder {
@@ -79,7 +80,7 @@
         }
         
         input[type="submit"] {
-            padding: 0.84rem;
+            padding: 0.74rem;
             border: 0;
             color: var(--footer-button-color, #fff);
             background: var(--footer-button-background, #f8b400);
@@ -109,7 +110,6 @@
             width: 3rem;
             height: 3rem;
             border-radius: 50%;
-            font-size: 1.2rem;
             color: #fff;
             align-items: center;
             margin: 0.3rem;
